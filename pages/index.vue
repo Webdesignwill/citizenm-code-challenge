@@ -1,17 +1,19 @@
 <template>
-  <main role="main" class="container">
-    <h4>{{ hotelData.amount }} available hotels in Europe</h4>
+  <main role="main">
+    <h4 class="container">{{ hotelData.amount }} available hotels in Europe</h4>
     <CurrencySwitchComponent />
 
-    <div class="hotel-grid">
-      <template v-for="hotel in hotelData.hotels" :key="hotel.name">
-        <CardComponent
-          v-for="offer in hotel.offers"
-          :key="`${hotel.name}-${offer.name}`"
-          :hotelInfo="hotel"
-          :details="offer"
-        />
-      </template>
+    <div class="container">
+      <div class="hotel-grid">
+        <template v-for="hotel in hotelData.hotels" :key="hotel.name">
+          <CardComponent
+            v-for="offer in hotel.offers"
+            :key="`${hotel.name}-${offer.name}`"
+            :hotelInfo="hotel"
+            :details="offer"
+          />
+        </template>
+      </div>
     </div>
   </main>
 </template>
