@@ -1,0 +1,17 @@
+$fonts-map: (
+  primary-regular: "Chalet-NewYorkNineteenSixty",
+);
+
+:root {
+  @each $key, $value in $fonts-map {
+    --cm-font-#{$key}: #{$value};
+  }
+}
+
+@each $key, $value in $fonts-map {
+  @font-face {
+    font-family: #{$value};
+    src: url("/fonts/#{$value}.woff2") format("woff2");
+    font-style: normal;
+  }
+}

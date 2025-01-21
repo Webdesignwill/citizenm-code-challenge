@@ -1,0 +1,30 @@
+$colors-map: (
+  color-primary-black: #000,
+  color-primary-white: #fff,
+  color-primary-red: #ff0038,
+
+  color-green: #03d386,
+  color-light-grey-surface: #f1f1f1,
+
+  color-red-hover: #e60032,
+  color-background: #fff,
+
+  color-border: #ddd,
+  color-border-hover: #000,
+);
+
+:root {
+  @each $key, $value in $colors-map {
+    --cm-#{$key}: #{$value};
+  }
+}
+
+@each $key, $value in $colors-map {
+  .color-#{$key} {
+    color: var(--cm-#{$key});
+  }
+
+  .bg-#{$key} {
+    background-color: var(--cm-#{$key});
+  }
+}

@@ -1,0 +1,29 @@
+:root {
+  --cm-border-radius: 4px;
+  --cm-header-height: 80px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  font-weight: normal;
+  outline: none;
+}
+
+#__nuxt,
+body,
+html {
+  min-height: 100dvh;
+  margin: 0;
+}
+
+body {
+  background-color: var(--cm-color-primary-white);
+  color: var(--cm-color-primary-black);
+  font-family: var(--cm-font-primary-regular);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+}

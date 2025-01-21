@@ -1,0 +1,35 @@
+@use "@/base/breakpoints.scss" as *;
+
+:root {
+  --cm--gutter-small: 1rem;
+  --cm--gutter-medium: 2rem;
+  --cm--gutter-large: 4rem;
+  --cm--content-max-width: 1200px;
+}
+
+.container {
+  width: 100%;
+  padding-left: var(--cm--gutter-small);
+  padding-right: var(--cm--gutter-small);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: var(--cm--content-max-width);
+}
+
+@media (min-width: breakpoint(tablet)) {
+  .container {
+    padding-left: var(--cm--gutter-medium);
+    padding-right: var(--cm--gutter-medium);
+  }
+}
+
+@media (min-width: breakpoint(desktop)) {
+  .container {
+    padding-left: var(--cm--gutter-large);
+    padding-right: var(--cm--gutter-large);
+  }
+}
