@@ -1,3 +1,7 @@
+## Staging Environment
+
+The staging environment for this is at [Staging](https://citizenmchallenge.netlify.app/)
+
 ## Prerequisites
 
 You need to install bun on your machine before you start.
