@@ -45,7 +45,7 @@ onMounted(() => {
   position: relative;
   z-index: 1;
   margin: 0;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--cm-spacing-base-4);
 }
@@ -66,6 +66,7 @@ onMounted(() => {
 :deep(.currency-switch--select button) {
   --tw-ring-color: var(--cm-color-border);
   background-color: var(--cm-color-primary-white);
+  color: var(--cm-color-primary-dark);
   width: 150px;
   cursor: pointer;
 }
