@@ -1,15 +1,15 @@
 <template>
   <div class="currency-switch">
     <div class="container">
-      <label class="currency-switch--label"
-        >Currency:
+      <div class="currency-switch--label">
+        Currency:
         <USelectMenu
           class="currency-switch--select"
           v-model="selectedCurrency"
           :options="availableCurrencies"
           @change="handleCurrencyChange"
         />
-      </label>
+      </div>
     </div>
   </div>
 </template>
