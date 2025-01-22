@@ -25,8 +25,11 @@ const handleCurrencyChange = () => {
 };
 
 onMounted(() => {
-  availableCurrencies.value = nuxtApp.$currency.availableCurrencies;
-  selectedCurrency.value = nuxtApp.$currency.initialCurrency;
+  const { availableCurrencies: currencies, initialCurrency } =
+    nuxtApp.$currency;
+
+  availableCurrencies.value = currencies;
+  selectedCurrency.value = initialCurrency;
 });
 </script>
 
